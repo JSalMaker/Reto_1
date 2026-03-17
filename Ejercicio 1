@@ -1,0 +1,35 @@
+###Ejercicio uno del Reto 1
+## Introduccion
+El primer problema era: "Crear  una funcion que me permita hacer una operacion basica con dos numeros ingresados por el usuario y tambien que operacion se va a hacer", la manera que lo hice fue ponuendo bucles while al principio con fin de que si existia,
+algun error tipografico no permitiera la continuidad del programa, esto en la evaluacion de los dos numeros, despues de esto por medio de condicionales se hizo la evaluacion de cual signo se iba hacer la operacion adecuada. 
+
+
+def operacion():
+    while True:
+        try:
+            x = float(input("Escribe un numero para la operacion: "))
+            break
+        except ValueError:
+            print("Primero va un numero")
+    while True:       
+        try:
+            y = float(input("Escribe otro numero para la operacion: "))
+            break
+        except ValueError:
+            print("Segundo va un numero")       
+    
+    sign = input("Escribe un signo basico para la operacion matematica: ")       
+    if sign == "+":
+        return x + y
+    elif sign == "-":
+        return x - y
+    elif sign == "*":    
+        return x * y
+    elif sign == "/":
+        if y != 0:
+            return x / y
+        else:
+            print("Prueba otro numero")
+    else: 
+        return print("No puedo hacer una operacion basica con esto, nice try")
+print(operacion())  
