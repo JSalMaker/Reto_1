@@ -31,3 +31,21 @@ El problema planteado el cual esperaba que se hiciera una funcion para poder rec
         else: 
             return print("No puedo hacer una operacion basica con esto, nice try")
     print(operacion())
+
+
+Explicacion del ejercicio 2 
+
+El problema planteado para el reto dos era desarrollar una funcion la cual revisara si la palabra era palindroma o no, el ejercicio se hizo aprovechando una propiedad de los strings y esta es que son arrays, visualizando si la primera letra coincidia con la ultima, la segunda con la penultima y asi sucesivamente se comprobo si era palindroma o no. El codigo a continuacion:
+
+    def palindromo():
+        palabra = input("Escribe una palabra para mirar si es palindroma: ")
+        for i in range(len(palabra)):
+            if palabra[i] != palabra[len(palabra) - 1 - i]:
+                return "Esta palabra no es palindroma"
+            else:
+                return "Esta palabra es palindroma"
+    print(palindromo())     
+
+Explicacion del ejercicio 3
+
+El problema para el reto 3 era desarrollar una funcion que determinara si un numero con respecto a un conjunto de datos era primo o no, el ejercicio fue posible con el operacion de modulo, esta operacion realiza la division de dos numeros y da el residuo de este, ya que los primos no son divisibles por ningun numero que no sea por ellos mismos o por uno, se revisa si el residuo cualquier
