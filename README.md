@@ -48,4 +48,20 @@ El problema planteado para el reto dos era desarrollar una funcion la cual revis
 
 Explicacion del ejercicio 3
 
-El problema para el reto 3 era desarrollar una funcion que determinara si un numero con respecto a un conjunto de datos era primo o no, el ejercicio fue posible con el operacion de modulo, esta operacion realiza la division de dos numeros y da el residuo de este, ya que los primos no son divisibles por ningun numero que no sea por ellos mismos o por uno, se revisa si el residuo cualquier
+El problema para el reto 3 era desarrollar una funcion que determinara si un numero con respecto a un conjunto de datos era primo o no, el ejercicio fue posible con el operacion de modulo, esta operacion realiza la division de dos numeros y da el residuo de este, ya que los primos no son divisibles por ningun numero que no sea por ellos mismos o por uno, primero se filtra que no alla ningun numero que sea menor a 2 ya que desde aqui empiezan los primos, despues de pasar ese filtro se revisa uno por uno los numeros para saber si este es divisible por algun numero apartir de dos, si esto no es posible es primo. El codigo a continuacion:
+
+    def Primos(primo):
+        primos = []
+        for i in primo:
+            if i < 2:    
+                continue 
+            Yeah_be = True
+            for o in range(2, i):
+                if i % o == 0:
+                    Yeah_be= False
+                    break
+            if Yeah_be:
+                primos.append(i)
+        return primos
+    x = [13, 4, 7, 9, 13445, 73, 31]
+    print(Primos(x))
