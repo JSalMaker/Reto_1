@@ -30,12 +30,11 @@ El problema planteado el cual esperaba que se hiciera una funcion para poder rec
                 print("Prueba otro numero")
         else: 
             return print("No puedo hacer una operacion basica con esto, nice try")
-    print(operacion())
 
 
 Explicacion del ejercicio 2 
 
-El problema planteado para el reto dos era desarrollar una funcion la cual revisara si la palabra era palindroma o no, el ejercicio se hizo aprovechando una propiedad de los strings y esta es que son arrays, visualizando si la primera letra coincidia con la ultima, la segunda con la penultima y asi sucesivamente se comprobo si era palindroma o no. El codigo a continuacion:
+El problema planteado para el ejercicio 2 era desarrollar una funcion la cual revisara si la palabra era palindroma o no, el ejercicio se hizo aprovechando una propiedad de los strings y esta es que son arrays, visualizando si la primera letra coincidia con la ultima, la segunda con la penultima y asi sucesivamente se comprobo si era palindroma o no. El codigo a continuacion:
 
     def palindromo():
         palabra = input("Escribe una palabra para mirar si es palindroma: ")
@@ -43,12 +42,11 @@ El problema planteado para el reto dos era desarrollar una funcion la cual revis
             if palabra[i] != palabra[len(palabra) - 1 - i]:
                 return "Esta palabra no es palindroma"
             else:
-                return "Esta palabra es palindroma"
-    print(palindromo())     
+                return "Esta palabra es palindroma"    
 
 Explicacion del ejercicio 3
 
-El problema para el reto 3 era desarrollar una funcion que determinara si un numero con respecto a un conjunto de datos era primo o no, el ejercicio fue posible con el operacion de modulo, esta operacion realiza la division de dos numeros y da el residuo de este, ya que los primos no son divisibles por ningun numero que no sea por ellos mismos o por uno, primero se filtra que no alla ningun numero que sea menor a 2 ya que desde aqui empiezan los primos, despues de pasar ese filtro se revisa uno por uno los numeros para saber si este es divisible por algun numero apartir de dos, si esto no es posible es primo. El codigo a continuacion:
+El problema para el ejercicio 3 era desarrollar una funcion que determinara si un numero con respecto a un conjunto de datos era primo o no, el ejercicio fue posible con el operacion de modulo, esta operacion realiza la division de dos numeros y da el residuo de este, ya que los primos no son divisibles por ningun numero que no sea por ellos mismos o por uno, primero se filtra que no alla ningun numero que sea menor a 2 ya que desde aqui empiezan los primos, despues de pasar ese filtro se revisa uno por uno los numeros para saber si este es divisible por algun numero apartir de dos, si esto no es posible es primo. El codigo a continuacion:
 
     def Primos(primo):
         primos = []
@@ -63,5 +61,30 @@ El problema para el reto 3 era desarrollar una funcion que determinara si un num
             if Yeah_be:
                 primos.append(i)
         return primos
-    x = [13, 4, 7, 9, 13445, 73, 31]
-    print(Primos(x))
+
+Explicacion del ejercicio 4
+
+El problema del ejercicio 4 era escribir una funcion que con respecto a una lista de numeros retorne la suma de dos numeros consecutivos dentro de la lista, la clave en este ejercicio es aprovechar que la lista es una array y usar las posiciones de la lista y hacer la suma, esto por medio de un for i in range(len.....), este bucle revisa todas las posiciones dentro de la lista y las suma con el numero siguiente, hasta llegar al ultimo numero, despues mandara el resultado de la mayor suma.
+
+    def mayor_suma(Numeros):
+    mayor_sum = Numeros[0] + Numeros[1]
+    for i in range(len(Numeros) - 1):
+        suma = Numeros[i] + Numeros[i+1]
+        if suma > mayor_sum:
+            mayor_sum = suma
+    return mayor_sum
+
+Explicacion del ejercicio 5
+
+El problema del ejercicicio 5 era escribir una funcion que devolviera los strings que contuvieran los mismos caracteres, en este ejercicio la solucion se encontraba en una parte en los bucles y en el otro el "sorted", el "sorted" desmantelo el string que se le enviaba y este reviso los caracteres, se hizo un if para poder comparar si el sorted de la palabra que sacamos con el i era el mismo que el de la j, El codigo a continuacion.
+
+    def mismos_caracteres(array):
+    listado = []
+    for i in range(len(array)):
+        for j in range(i + 1, len(array)):
+            if sorted(array[i]) == sorted(array[j]):
+                if array[i] not in listado:
+                    listado.append(array[i])
+                if array[j] not in listado:
+                    listado.append(array[j])
+    return listado 
