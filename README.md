@@ -1,3 +1,5 @@
+## Clase Programacion Orientada a Objetos: Reto_1
+
 Explicacion del ejercicio 1
 
 El problema planteado el cual esperaba que se hiciera una funcion para poder recolectar el dato de 2 numeros y un signo el cual represantaba una operacion matematica, lo primero que se hizo en el codigo fue, poner 2 bucles esto con fin de que si en algun momento llegara a tener el usuario algun error tipografico y puso una letra en vez de un numero, el programa devolvera al usuario hasta que ponga un numero, y despues de esto por medio de condicionales se determinaron cuales iban a ser los signos y como el codigo iba a reconocerlos. el codigo a continuacion:
