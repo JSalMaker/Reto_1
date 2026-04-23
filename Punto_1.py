@@ -1,0 +1,29 @@
+def operacion():
+    while True:
+        try:
+            x = float(input("Escribe un numero para la operacion: "))
+            break
+        except ValueError:
+            print("Primero va un numero")
+    while True:       
+        try:
+            y = float(input("Escribe otro numero para la operacion: "))
+            break
+        except ValueError:
+            print("Segundo va un numero")       
+    
+    signo = input("Escribe un signo basico para la operacion matematica: ")       
+    if signo == "+":
+        return x + y
+    elif signo == "-":
+        return x - y
+    elif signo == "*":    
+        return x * y
+    elif signo == "/":
+        if y != 0:
+            return x / y
+        else:
+            print("Prueba otro numero")
+    else: 
+        return print("No puedo hacer una operacion basica con esto, nice try")
+print(operacion())  
